@@ -1,0 +1,32 @@
+.user-card {
+    width: 200px;
+    height: 100px;
+    border: 1px solid #ccc;
+    margin: 10px;
+    display: inline-block;
+    perspective: 1000px;
+  }
+  
+  .front,
+  .back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    transition: transform 0.5s;
+  }
+  
+  .back {
+    transform: rotateY(180deg);
+  }
+  
+  .flipped .front {
+    transform: rotateY(180deg);
+  }
+  
+  .flipped .back {
+    transform: rotateY(0deg);
+  }
+  
